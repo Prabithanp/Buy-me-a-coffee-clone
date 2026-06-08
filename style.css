@@ -109,18 +109,21 @@ main h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24
 
 .c2 {
   position: absolute !important;
-  top: -120px !important;
+  top: -90px !important;
   left: 50% !important;
   transform: translateX(-50%) rotate(2deg) !important;
-  z-index: 100 !important;
+  z-index: 5 !important;
 }
 
 .c5 {
   position: absolute !important;
-  bottom: -120px !important;
+  top: auto!important;
+  bottom: auto!important;
   left: 50% !important;
-  transform: translateX(-50%) rotate(-1deg) !important;
-  z-index: 100 !important;
+  transform: translateX(-50%)  translateY(300px) scale(1) rotate(-1deg) !important;
+  display: block !important;
+  z-index: 99!important;
+  
 }
 
 .c1 { position: absolute !important; top: 12%; left: 4% !important; transform: rotate(-3deg) !important; }
@@ -129,21 +132,21 @@ main h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24
 .c6 { position: absolute !important; bottom: 12%; right: 4% !important; transform: rotate(2deg) !important; }
 
 
-
-
-
 .section-two {
     width: 100%;
-    min-height: 140vh !important;
+    min-height: 100vh !important;
     background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: relative !important;
     overflow: hidden;
-    padding: 220px 20px !important;
+    padding-top: 60px 20px!important;
+    margin-top: 230px!important;
     box-sizing: border-box;
+    
+    
 }
 
 
@@ -369,6 +372,7 @@ main h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24
     justify-content: center;
     align-items: center;
     padding: 60px 20px;
+    scroll-snap-align: start;
 }
 
 
@@ -775,7 +779,8 @@ main h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24
     flex-direction: column;
     justify-content: space-between; 
     padding: 80px 40px 20px 40px;
-    box-sizing: border-box;
+    box-sizing: content-box;
+    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     width: 100%;
 }
@@ -888,12 +893,6 @@ main h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24
     color: #111111;
 }
 
-
-/* ==========================================================================
-   GLOBAL FONT AND SIZE CORRECTION FOR ALL 7 PAGES
-   ========================================================================== */
-
-/* 1. എല്ലാ എലമെന്റുകൾക്കും ഒറിജിനൽ വെബ്സൈറ്റിലെ പോലെ ഭംഗിയുള്ള ഫോണ്ട് നൽകാൻ */
 *, *::before, *::after {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
@@ -982,4 +981,94 @@ main > span:first-child,
   cursor: pointer !important;
   display: inline-block !important;
   text-decoration: none !important;
+
 }
+
+
+@media screen and (max-width: 991px) {
+  
+  
+  main, 
+  section, 
+  .page-section, 
+  [class*="section"], 
+  [class*="hero"] {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 60px 16px !important; 
+    box-sizing: border-box !important;
+  }
+
+  
+  h1, 
+  main h1, 
+  .shop-centered-header h1, 
+  [class*="title"] h1 {
+    font-size: 32px !important;    
+    line-height: 1.2 !important;
+    letter-spacing: -0.5px !important;
+    margin: 10px auto 16px auto !important;
+  }
+  
+  
+  .hero-center-content h1 {
+    font-size: 36px !important;
+  }
+
+  
+  p, 
+  main p, 
+  .sub, 
+  [class*="desc"], 
+  [class*="subtitle"] {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 24px !important;
+    max-width: 100% !important;
+  }
+
+   
+  .c1, .c2, .c3, .c4, .c5, .c6, 
+  [class*="card"], 
+  [class*="creator"] {
+    position: relative !important; 
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;    
+    margin: 16px auto !important;  
+    width: 100% !important;
+    max-width: 340px !important;   
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+  }
+
+  
+  .top-cards-grid, 
+  .bottom-cards-grid, 
+  [class*="grid"], 
+  [class*="container"] {
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center !important;
+    gap: 0 !important;
+    width: 100% !important;
+  }
+
+  
+  .btn, 
+  .btn-start, 
+  .btn.large, 
+  [class*="btn"] {
+    font-size: 16px !important;
+    padding: 14px 28px !important;
+    width: 100% !important;       
+    max-width: 280px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+}
+
+
+
+
