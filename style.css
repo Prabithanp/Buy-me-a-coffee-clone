@@ -985,90 +985,107 @@ main > span:first-child,
 }
 
 
-@media screen and (max-width: 991px) {
-  
-  
-  main, 
-  section, 
-  .page-section, 
-  [class*="section"], 
-  [class*="hero"] {
-    min-height: auto !important;
-    height: auto !important;
-    padding: 60px 16px !important; 
-    box-sizing: border-box !important;
+@media screen and (max-width: 768px) {
+
+  .navbar{
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    text-align: center;
   }
 
-  
-  h1, 
-  main h1, 
-  .shop-centered-header h1, 
-  [class*="title"] h1 {
-    font-size: 32px !important;    
-    line-height: 1.2 !important;
-    letter-spacing: -0.5px !important;
-    margin: 10px auto 16px auto !important;
-  }
-  
-  
-  .hero-center-content h1 {
-    font-size: 36px !important;
+  .menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
-  
-  p, 
-  main p, 
-  .sub, 
-  [class*="desc"], 
-  [class*="subtitle"] {
-    font-size: 16px !important;
-    line-height: 1.5 !important;
-    margin-bottom: 24px !important;
-    max-width: 100% !important;
+  main h1{
+    font-size: 2.2rem !important;
   }
 
-   
-  .c1, .c2, .c3, .c4, .c5, .c6, 
-  [class*="card"], 
-  [class*="creator"] {
-    position: relative !important; 
-    top: auto !important;
-    bottom: auto !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;    
-    margin: 16px auto !important;  
-    width: 100% !important;
-    max-width: 340px !important;   
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+  .sub{
+    font-size: 1rem !important;
+    padding: 0 15px;
   }
 
-  
-  .top-cards-grid, 
-  .bottom-cards-grid, 
-  [class*="grid"], 
-  [class*="container"] {
-    display: flex !important;
-    flex-direction: column !important; 
-    align-items: center !important;
-    gap: 0 !important;
-    width: 100% !important;
+  .card,
+  .c1,.c2,.c3,.c4,.c5,.c6{
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    max-width: 320px;
+    margin: 15px auto;
   }
 
-  
-  .btn, 
-  .btn-start, 
-  .btn.large, 
-  [class*="btn"] {
-    font-size: 16px !important;
-    padding: 14px 28px !important;
-    width: 100% !important;       
-    max-width: 280px !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
+  .right-side{
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .card-msg,
+  .m1,.m2,.m3,.m4{
+    position: static !important;
+    margin: 12px auto;
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .coffee-widget{
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .membership-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .member-card,
+  .active-pro,
+  .side-info-box{
+    width: 90%;
+    max-width: 320px;
+    margin: 0;
+  }
+
+  .left-members,
+  .right-earnings{
+    margin: 0;
+  }
+
+  .comparison-grid,
+  .creators-grid{
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .shop-centered-header h2,
+  .publish-header h2,
+  .comparison-header h2,
+  .creators-header h2,
+  .membership-header h1,
+  .support-left h2{
+    font-size: 32px;
+  }
+
+  .shop-centered-pic img,
+  .publish-visual img{
+    width: 100%;
+    height: auto;
+  }
+
+  .bmac-footer{
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right{
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
-
-
-
-
